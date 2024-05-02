@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Opportunities" icon-name="standard:opportunity">
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+     
+        <div style="margin-bottom: 10px;">
+            <lightning-button label="New" onclick={New}></lightning-button> 
+            <lightning-button label="Dashboard" onclick={navigateToDashboard}></lightning-button>
+       
+                
+                <lightning-button icon-name="utility:download" 
+                                  label="Download as CSV" 
+                                  title="Download CSV File"
+                                  onclick={downloadCSV} variant="brand"></lightning-button>
+
+        </div>
+        <div style="margin-bottom: 10px;">
+            <lightning-input type="search" onchange={handleKeyChange} variant="label-hidden" label="Search" value={searchKey} placeholder="Search by name"></lightning-input>
+        </div>
+            
+        <lightning-card>
+            <div class="slds-m-around_medium">
+                <lightning-datatable key-field="Id" data={data} columns={columns} onrowaction={handleclick} hide-checkbox-column="true" onrowselection={handleRowSelection}></lightning-datatable>
+            </div>
+            <lightning-layout horizontal-align="space">
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Previous" onclick={handlePrevious} disabled={isFirstPage}></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    Page {page} of {totalPage}
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    <lightning-button label="Next" onclick={handleNext} disabled={isLastPage}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        </lightning-card>
+</template>

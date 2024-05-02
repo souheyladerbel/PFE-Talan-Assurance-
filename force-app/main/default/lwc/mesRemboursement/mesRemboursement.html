@@ -1,0 +1,16 @@
+
+<template>
+  <lightning-card title="Cases for Current User">
+      <template if:true={cases}>
+          <lightning-datatable
+              key-field="Id"
+              data={cases}
+              columns={columns}
+              hide-checkbox-column="true">
+          </lightning-datatable>
+      </template>
+      <template if:false={cases}>
+          No cases found for the current user.
+      </template>
+  </lightning-card>
+</template>

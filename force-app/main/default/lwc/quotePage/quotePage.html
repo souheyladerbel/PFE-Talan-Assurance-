@@ -1,0 +1,45 @@
+
+<template>
+    
+    <template if:true={allActivitiesData}>
+        <lightning-card title="Quotes" icon-name="standard:quotes">
+          
+            <template if:true={loading}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </template>
+           
+
+           
+            <div style="margin-bottom: 10px;">
+                <lightning-button label="New" onclick={New}></lightning-button>        
+                    
+                    <lightning-button icon-name="utility:download" 
+                                      label="Download as CSV" 
+                                      title="Download CSV File"
+                                      onclick={downloadCSV} variant="brand"></lightning-button>
+    
+            </div>
+            <div style="margin-bottom: 10px;">
+                <lightning-input type="search" onchange={handleKeyChange}  variant="label-hidden" label="Search" value={searchKey} placeholder="Search by name"></lightning-input>
+            </div>
+                
+        
+                
+                <lightning-datatable
+                    key-field="Id"
+                    data={allActivitiesData}
+                    columns={columns}
+                    onrowaction={handleclick}
+                    hide-checkbox-column>
+                    
+                </lightning-datatable>
+                
+          
+           
+        </lightning-card>
+        
+    </template>
+</template>
+
+
+

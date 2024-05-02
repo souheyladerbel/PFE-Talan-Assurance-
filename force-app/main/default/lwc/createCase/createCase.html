@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="New Case Form">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                label="Subject"
+                value={subject}
+                onchange={handleSubjectChange}>
+            </lightning-input>
+           
+            <lightning-textarea
+                label="Description"
+                value={description}
+                onchange={handleDescriptionChange}>
+            </lightning-textarea>
+           
+            <lightning-file-upload
+                label="Attach File"
+                accept={fileFormats}
+                onuploadfinished={handleFileUpload}>
+            </lightning-file-upload>
+           
+            <lightning-button
+                label="Submit Case"
+                onclick={handleSubmit}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

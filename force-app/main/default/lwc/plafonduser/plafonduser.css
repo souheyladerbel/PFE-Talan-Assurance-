@@ -1,0 +1,20 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.header h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.usage-message {
+    color: #f00; /* Rouge */
+    font-style: italic;
+}

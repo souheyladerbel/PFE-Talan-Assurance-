@@ -1,0 +1,45 @@
+<template>
+
+    <lightning-card>
+          <div slot="actions">
+           <lightning-button label="Create Contact" variant="brand-outline" onclick={navigateToNewRecordPage}></lightning-button>
+            &nbsp;&nbsp;
+            <lightning-button label="Importer depuis CSV" variant="brand" onclick={navigateToDataImporter}></lightning-button>
+            <lightning-button icon-name="utility:download" 
+            label="Download as CSV" 
+            title="Download CSV File"
+            onclick={downloadCSVFile} variant="brand"></lightning-button>
+              <lightning-button label="Delete Selected Contacts" variant="destructive-text" onclick={deleteSelectedContacts}></lightning-button>            &nbsp;&nbsp;
+                   &nbsp;&nbsp;
+          </div>
+      
+      <div class="slds-align_absolute-center">
+        <div class="slds-card__body_inner my-custom-class">
+              <p>Selected Contacts: {selectedContactsLen}</p>
+              <div class="slds-grid slds-gutters slds-p-bottom_x-small slds-p-left_x-small">
+              <lightning-input type="search" onchange={handleSearch}></lightning-input>
+          </div>
+  
+          <lightning-datatable
+            key-field="id"
+            data={contacts}
+            columns={cols}
+            onrowselection={handleRowSelection}
+            onrowaction={handleRowAction}
+            default-sort-direction={defaultSortDirection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onsort={onHandleSort}
+            >
+            <template for:column="actions">
+              <lightning-button-group>
+                <lightning-button-icon icon-name="utility:edit" variant="border-filled"></lightning-button-icon>
+                <lightning-button-icon icon-name="utility:delete" variant="border-filled"></lightning-button-icon>
+              </lightning-button-group>
+            </template>
+          </lightning-datatable>
+        </div>
+      </div>
+    </lightning-card>
+  </template>
+  

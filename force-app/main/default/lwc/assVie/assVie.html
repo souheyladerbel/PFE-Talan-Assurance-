@@ -1,0 +1,137 @@
+
+<template>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWU000002lY2H" method="POST">    
+        <input type=hidden name="oid" value="00DWU000002lY2H">
+        <input type=hidden name="retURL" value="http://talan-9a-dev-ed.develop.my.site.com/Safesure01/s/thankyou">
+        
+    <div class="card">
+        <div class="card-header">Formulaire de Contact</div>
+        <div class="card-body">
+            <div class="section">
+                <div class="section-header">Informations Personnelles</div>
+                <div class="form-group">
+                    <label for="first_name" class="required">Nom</label>
+                    <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required/>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name" class="required">Prénom</label>
+                    <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required">Email</label>
+                    <input id="email" maxlength="80" name="email" size="20" type="text" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="required">Numéro téléphone</label>
+                    <input id="phone" maxlength="40" name="phone" size="20" type="text" required/>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-header">Informations Entreprise</div>
+                <div class="form-group">
+                    <label for="company" class="required">Nom entreprise</label>
+                    <input id="company" maxlength="40" name="company" size="20" type="text" required/>
+                </div>
+
+                <div class="row">
+                    <label for="industry" class="required">Industrie</label>
+                    <select id="industry" name="industry">
+                        <option value="">--None--</option>
+                        <option value="Apparel">Apparel</option>
+                        <option value="Banking">Banking</option>
+                        <option value="Biotechnology">Biotechnology</option>
+                        <option value="Chemicals">Chemicals</option>
+                        <option value="Communications">Communications</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Consulting">Consulting</option>
+                        <option value="Education">Education</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Environmental">Environmental</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Food &amp; Beverage">Food &amp; Beverage</option>
+                        <option value="Government">Government</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="Insurance">Insurance</option>
+                        <option value="Machinery">Machinery</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Media">Media</option>
+                        <option value="Not For Profit">Not For Profit</option>
+                        <option value="Recreation">Recreation</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Shipping">Shipping</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Telecommunications">Telecommunications</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="employees" class="required">Nombre d'employés</label>
+                    <input id="employees" name="employees" size="20" type="text" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="revenue">Revenu Annuel (DT)</label>
+                    <input id="revenue" name="revenue" size="20" type="text"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="url">Site Web</label>
+                    <input id="url" maxlength="80" name="url" size="20" type="text"/>
+                </div>
+
+                <div class="row">
+                    <label class="required">Type d'Assurance</label>
+                    <select id="00NWU000001Nbvx" name="00NWU000001Nbvx" title="TypeAssurance">
+                        <option value="">--None--</option>
+                        <option value="Vie">Vie</option>
+                        <option value="Santé">Santé</option>
+                        <option value="Accident">Accident</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label class="required">Durée d'assurance</label>
+                    <select id="00NWU000001Ukkn" name="00NWU000001Ukkn" title="Durré d'assurance">
+                        <option value="">--None--</option>
+                        <option value="1 ans">1 ans</option>
+                        <option value="2 ans">2 ans</option>
+                        <option value="3 ans">3 ans</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Pays</label>
+                    <input id="country" maxlength="40" name="country" size="20" type="text"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Ville</label>
+                    <input id="city" maxlength="40" name="city" size="20" type="text"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">Zip</label>
+                    <input id="zip" maxlength="20" name="zip" size="20" type="text"/>
+                </div>
+
+                <input  value="Envoyer"  class="submit-btn"   type="submit" name="submit">
+            </div>
+        </div>
+    </div>
+    </form>
+</template>
+
+
+
+    

@@ -1,0 +1,28 @@
+.thank-you-container {
+    background-image: url('D:\SalesforceThrailhead\SafeSure\force-app\main\default\lwc\backToHome\adrrr.jpg'); /* Chemin vers votre image de fond */
+    background-size: cover; /* Ajustement de la taille de l'image */
+    background-position: center; /* Position de l'image */
+    background-repeat: no-repeat; /* Pas de répétition */
+    height: 100vh; /* Taille de l'écran visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-you-card {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Opacité du fond de la carte */
+}
+
+.card-content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

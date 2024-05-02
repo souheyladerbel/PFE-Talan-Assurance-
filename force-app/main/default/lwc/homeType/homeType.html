@@ -1,0 +1,17 @@
+<template>
+    <div class="card-container">
+      <template for:each={services} for:item="service">
+        <a key={service.id} href={service.link} rel="noopener noreferrer">
+          <div class="card">
+            <div class="card-image">
+              <img src={service.imageSrc} alt={service.altText}>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{service.title}</h3>
+              <p class="card-description">{service.description}</p>
+            </div>
+          </div>
+        </a>
+      </template>
+    </div>
+  </template>

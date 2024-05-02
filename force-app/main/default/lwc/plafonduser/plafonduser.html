@@ -1,0 +1,16 @@
+<template>
+    <div class="card">
+        <div class="header">
+            <h2>Bonjour, {contactName}</h2>
+        </div>
+        <div class="content">
+            <template if:false={showUsageMessage}>
+                <p>Votre plafond actuel est de :</p>
+                <h3>{formattedPlafond}</h3>
+            </template>
+            <template if:true={showUsageMessage}>
+                <div class="usage-message">{usageMessage}</div>
+            </template>
+        </div>
+    </div>
+</template>

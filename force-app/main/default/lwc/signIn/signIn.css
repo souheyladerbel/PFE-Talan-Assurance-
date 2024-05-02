@@ -1,0 +1,40 @@
+/* signInForm.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container form {
+    max-width: 400px;
+    width: 90%; /* Ajustement pour une largeur légèrement réduite */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container form input[type="text"],
+.container form input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+    transition: border-color 0.3s ease; /* Ajout d'une transition pour une interaction plus fluide */
+}
+
+.container form input[type="text"]:focus,
+.container form input[type="password"]:focus {
+    border-color: #007bff; /* Changement de couleur de bordure lors du focus */
+    outline: none; /* Suppression de l'outline par défaut */
+}
